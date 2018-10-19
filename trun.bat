@@ -1,2 +1,2 @@
 
-python -m unittest connector/HttpToolsTests.py
+python -m unittest connector/Test_HttpTools.py
