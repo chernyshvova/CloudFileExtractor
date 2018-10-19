@@ -1,0 +1,13 @@
+{
+    "python.unitTest.cwd": "",
+    "python.unitTest.unittestEnabled": true,
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./connector",
+        "-p",
+        "test*.py"
+    ]
+}
