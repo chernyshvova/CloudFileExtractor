@@ -1,6 +1,7 @@
 from connector.HTTPTools import *
 import unittest
 from proxy import proxy
+import os
 
 class HTTPToolsTests(unittest.TestCase):
     def test_correct_queryWithoutExceptions(self):
@@ -32,6 +33,20 @@ class HTTPToolsTests(unittest.TestCase):
         prx = proxy("000.000.000.000", 3128)
         response = get_http_request_using_proxy("http://python-lab.ru/documentation/27/stdlib/unittest.html", prx)
         self.assertEqual(None, response)
+    
+    def test_downloadFile(self):
+        file_url = "https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        file_name = "tmpFile"
+        directory = "tmp"
+        filePath = os.path.join(directory, file_name)
+        file_size = 5969
+        if os.path.isdir(directory) is False:
+            os.mkdir(directory)
         
+        download_file(file_url, filePath)
+        self.assertEqual(True, os.path.isfile(filePath))
+        self.assertEqual(file_size,os.path.getsize(filePath))
+        os.remove("tmp/tmpFile")
+
 if __name__ == '__main__':
     unittest.main()
