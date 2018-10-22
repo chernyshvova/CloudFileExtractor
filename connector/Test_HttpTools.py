@@ -48,5 +48,20 @@ class HTTPToolsTests(unittest.TestCase):
         self.assertEqual(file_size,os.path.getsize(filePath))
         os.remove("tmp/tmpFile")
 
+    def test_downloadingFileUsingProxy(self):
+        prx = proxy("1.20.102.58", 58461)
+        file_url = "https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        file_name = "tmpFile"
+        directory = "tmp"
+        filePath = os.path.join(directory, file_name)
+        file_size = 5969
+        if os.path.isdir(directory) is False:
+            os.mkdir(directory)
+        
+        download_file(file_url, filePath, prx)
+        self.assertEqual(True, os.path.isfile(filePath))
+        self.assertEqual(file_size,os.path.getsize(filePath))
+        os.remove("tmp/tmpFile")
+
 if __name__ == '__main__':
     unittest.main()

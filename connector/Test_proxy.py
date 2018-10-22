@@ -1,7 +1,7 @@
 import unittest
 from proxy import proxy
 
-class HTTPToolsTests(unittest.TestCase):
+class proxyTests(unittest.TestCase):
     def test_proxy_creating(self):
         prx = proxy("host", 123)
         self.assertEqual("host", prx.host)
