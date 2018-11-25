@@ -1,17 +1,10 @@
-from connector.HTTPTools import *
-from connector.proxy import proxy
-
-from urllib import request
-from tqdm import tqdm
-import requests
-#request.urlretrieve('https://drive.google.com/uc?authuser=0&id=0B6kd31lscJ9TdmVadEd6ZGc0NTQ&export=download', './ложим_в_текущаю_папку.png')
+from Requester import connector
 
 
-#url = "https://drive.google.com/uc?authuser=0&id=0B6kd31lscJ9TdmVadEd6ZGc0NTQ&export=download"
-#response = requests.get(url, stream=True)
-#with open("10MB", "wb") as handle:
-    #for data in tqdm(response.iter_content()):
-        #handle.write(data)
-#print(str(response.getcode()))
 
-download_file("https://drive.google.com/uc?authuser=0&id=0B6kd31lscJ9TdmVadEd6ZGc0NTQ&export=download", "pic2.png")
+
+conx = connector()
+
+conx.get_http_request("https://www.google.com.ua/")
+conx.download_file("https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+                    "anme")

@@ -1,4 +1,4 @@
-from connector.HTTPTools import *
+from HTTPTools import *
 import unittest
 from proxy import proxy
 import os

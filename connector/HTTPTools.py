@@ -19,6 +19,7 @@ def check_http_request(response):
     if response.getcode()!= 200:
         raise Exception
 
+#join with get_http_request
 def get_http_request_using_proxy(url, proxy):
     try:
         req = request.Request(url)

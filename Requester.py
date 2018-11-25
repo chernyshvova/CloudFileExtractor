@@ -1,36 +1,21 @@
-import urllib.request
-from connector.HTTPTools import get_http_request, check_http_request
+import urllib
+from urllib import request
+from connector.HTTPTools import get_http_request, check_http_request, get_http_request_using_proxy, download_file
 from connector.proxy import proxy
 
-class request_HTTPconnector:
+class connector:
     response = None
-    proxy = None
 
-    def __init__(self, proxy = None):
-        if proxy:
-            self.proxy = proxy
-
-    def get_request(self, url):
-        response = get_http_request(url)
-        check_http_request(response)
-
-    def set_request(self):
-        pass
-    def check_customeResponse(self):
-        pass
-
-    def reset_proxy(self, proxy):
-        self.proxy = proxy
+    def get_http_request(self, url, proxy = None):
+        if proxy == None:
+            self.response = get_http_request(url)
+        else:
+            self.response = get_http_request_using_proxy(url, proxy)
     
+        check_http_request(self.response)
+    
+    def get_body(self):
+        return self.response.read()
 
-class web_Socket_Connector:
-    def __init__(self, proxy = None):
-        pass
-    def send(self):
-        pass
-    def receive(self):
-        pass
-    def reset_proxy(self, proxy):
-        pass
-    def check_custom_response(self):
-        pass
+    def download_file(self, url, name):
+        download_file(url, name, None)
