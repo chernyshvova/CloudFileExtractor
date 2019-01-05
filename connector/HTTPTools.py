@@ -3,19 +3,27 @@ from urllib.request import urlopen
 from urllib import request
 from connector.proxy import proxy
 import socket
+from urllib.error import HTTPError
 from tqdm import tqdm
 import requests
 import math
+from urllib.parse import quote_plus
 
 def get_http_request(url):
     try:
         return urlopen(url)
     except socket.timeout as ex:
-        print(str(ex) + "---- TODO- instert error code in HTTPtools")
+        print(str(ex) + "socked timeout")
+    except HTTPError as ex:
+        print(str(ex))
     except Exception as ex:
         print(str(ex) + "---- TODO- instert error code in HTTPtools")
 
+
 def check_http_request(response):
+
+    if response is None:
+         raise Exception("response is empty")
     if response.getcode()!= 200:
         raise Exception
 
@@ -28,9 +36,10 @@ def get_http_request_using_proxy(url, proxy):
         
         return urlopen(req, None, 10)
     except socket.timeout as ex:
-        print(str(ex) + "---- TODO- instert error code in HTTPtools")
+        print(str(ex) + "---- socked timeou")
     except Exception as ex:
         print(str(ex) + "---- TODO- instert error code in HTTPtools")
+        raise ex
 
 def download_file(url, name, proxy = None):
     try:
@@ -47,3 +56,7 @@ def download_file(url, name, proxy = None):
         print(str(ex) + "---- TODO- instert error code in HTTPtools")
     except Exception as ex:
         print(str(ex) + "---- TODO- instert error code in HTTPtools")
+
+
+def urlEncode(url):
+    return quote_plus(url)

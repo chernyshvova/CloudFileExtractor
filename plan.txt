@@ -1,68 +1,310 @@
+GET http://files.dp.ua/files_list HTTP/1.1
+Host: files.dp.ua
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
 
-0.----------------commons---------------
-web socket connector
-http connector
-Таймер - базовый функционал для работы со временем
 
-1.Работа с проксями
-2.ДБ дизайн
-3.Работа с ДБ
-4.Автотесты на питоне
-5.Робот.
-6.Проверка ошибок.
-7.имитация чата для тестов
-8.Посмотреть в сторону создания платежей
-9.Посмотреть в сторону создания аккаунтов.
-10.Создать шаблон сущности для всех чатов
-11.Собрать список чатов где есть точка входа.
-12.Собрать сниффы.
-13.Разреверсить(воссоздать работу чатов) - самое сложное.
-14.Логирование
-15.Что то вроде демки или интерфейса.
-Период аналитики и тестирования
------------------------------------------------------------------------------------------------------
-релиз---
-1.
--Найти много бесплатных проксей.
--Узнать сколько стоят прокси, они должны быть разные.Должен быть прикольный api
--Удобный парсинг проксей из базы, или json файла
+HTTP/1.1 200 OK
+Date: Mon, 10 Dec 2018 13:03:36 GMT
+Server: Apache/2.4.25 (Debian)
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 43482
+Keep-Alive: timeout=10
+Connection: Keep-Alive
+Content-Type: text/html; charset=utf-8
 
-2.
-Дизайн должен разделять следующие сущности.
--диалог - для аналитики
--Операторы
--Неудачные диалоги - для фитбека
-Определять неудачный диалог можно по сбоям или регистрировать отклонения паттернов.
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="ru"/>
+<meta name="keywords" content="файлообменник,файло обмен,file shara,files .dp,files,file,ашдуыювзюгф,передать файл,скачать файл,быстрый файлообменник,без регистрации,rar,exe,zip,mp3"/>
+<meta name="description" content="files.dp.ua - быстрый файлообменник. Обменивайтесь вашими файлами без регистрации и сторонних програм. Скачать rar,zip,exe,mp3,bin,jpg,gif,avi,mp4 и другие форматы файлов."/>
+<meta name="robots" content="all"/>
+<title>Скачать файлы с файлообменника files.dp.ua</title>
+<link rel="icon"  href="http://files.dp.ua/favicon.ico"/>
+<link type="text/css" rel="stylesheet" href="http://files.dp.ua/css/style.css"/><script type="text/javascript" src="http://files.dp.ua/js/jquery.js"></script>
+<noscript><style>
+#content, #secur{display:none;}
+#content2, #secur2{display: inline;}
+</style>
+</noscript><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6026413138957186",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+<div id="page">
+	<div class="zmap"><h1>Лучший файлообменник files.dp.ua</h1></div>
+	<div id="menu">
 
-3.Это должна быть удобная обертка конекретно под нужды.
-Например получение нужного оператора, диалога.
-Разброс данных сессии по таблицам.
-(Возможны ссылки на предидущие диалоги1)
-
-4.Научится их писать.
-Попробовал написать тесты на unittests и поставил test Explorer для vs code!!!
-
-5.
--Собрать и проанализировать тестовые диалоги
--хз))
-
-6.Дело важное, по этому надо что бы было поменьше ошибок в реальных условиях.
--Регулярная проверка тестами
--Отслеживание недачных обращений
-
-7.Есть шаблонная сущность для всех чатов. Надо что бы ее можно было натравливать на тестовый чат.
-
-8.В идеале что бы можно было генерировать платежи без палева моей карты. Может есть варианты с электронными картами.(опасно)
-Если это возможно можно использовать много номеров
-
-10.Разработать сущность класс или систему, которая имеет все базовые функции для работы с чатом.
-
-11.Собрать все сайты, почты, соц сети(телеграмм, вайбер)вк, фейсбук
-
-12.Проснифать все чаты на разных этапах(соц сети можно не сниффать, там api можно юзать)
-
-13.имплемент
+<ul id="footer_menu">
+<li><a href="http://files.dp.ua/"  title="Загрузить файл" alt="Загрузить файл">Загрузить файл</a></li>
+<li><a href="http://files.zp.ua/images"  title="Загрузить изображение" alt="Загрузить изображение">Загрузить изображение</a></li>
+<li><a href="http://radio.mega.dp.ua" target="_blank"  title="Мега радио онлайн" alt="Мега радио онлайн">Слушать радио</a></li>
+<li><a href="http://files.dp.ua/help"  title="Помощь" alt="Помощь">Помощь</a></li>
+<li><a href="http://files.dp.ua/files_list" id="red" title="Скачать файл" alt="Скачать файл">Скачать файл</a></li></ul>
+<div class="find_key">
+<form action="file" method="GET">
+<input type="text" name="source" class="in_key" value="Введите ключ" onfocus="this.value=''">
+<input type="submit" value="" class="ok_key"/></form>
+</div>
+</div>
 
 
 
 
+<center>
+<div class="b1">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- files.dp.ua_big -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6026413138957186"
+     data-ad-slot="5427526352"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+</center>
+
+
+<div id="cont">
+<h1>Последние загруженные файлы</h1>
+<div class="files_list">
+		<center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:1000px;height:200px"
+     data-ad-client="ca-pub-6026413138957186"
+     data-ad-slot="6314604753"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+
+</div>
+<div class="afind"><center>
+<table>
+<tr><th width="750px">Имя файла</th><th width="100px">Размер</th><th width="100px">Дата</th></tr>
+
+<tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014591031047024&url=1544439541351.jpg" title="Скачать файл 1544439541351.jpg" alt="1544439541351.jpg">1544439541351.jpg</a>
+</p></td><td>33.45 KB</td><td>15:00 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014591927741519&url=Fray_Labirinty-Eho_1_Chuzhak.C1TC_w.508504.fb2.zip" title="Скачать файл Fray_Labirinty-Eho_1_Chuzhak.C1TC_w.508504.fb2.zip" alt="Fray_Labirinty-Eho_1_Chuzhak.C1TC_w.508504.fb2.zip">Fray_Labirinty-Eho_1_Chuzhak.C1TC_w.508504.fb2.zip</a>
+</p></td><td>14.73 MB</td><td>14:59 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014560773742016&url=Nogodnie plakaty.rar" title="Скачать файл Nogodnie plakaty.rar" alt="Nogodnie plakaty.rar">Nogodnie plakaty.rar</a>
+</p></td><td>45.45 MB</td><td>14:56 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014501645208709&url=10.12.18.rar" title="Скачать файл 10.12.18.rar" alt="10.12.18.rar">10.12.18.rar</a>
+</p></td><td>58 MB</td><td>14:50 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014473421010589&url=18.12.10-SCHitovі dlya AR.rar" title="Скачать файл 18.12.10-SCHitovі dlya AR.rar" alt="18.12.10-SCHitovі dlya AR.rar">18.12.10-SCHitovі dlya AR.rar</a>
+</p></td><td>18.61 MB</td><td>14:49 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014433866668630&url=Track No03.mp3" title="Скачать файл Track No03.mp3" alt="Track No03.mp3">Track No03.mp3</a>
+</p></td><td>3 MB</td><td>14:45 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014435526531065&url=UPDSETUP.EXE" title="Скачать файл UPDSETUP.EXE" alt="UPDSETUP.EXE">UPDSETUP.EXE</a>
+</p></td><td>31.07 MB</td><td>14:44 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014425098879698&url=2018-12-10-15-24-39.jpg" title="Скачать файл 2018-12-10-15-24-39.jpg" alt="2018-12-10-15-24-39.jpg">2018-12-10-15-24-39.jpg</a>
+</p></td><td>202.88 KB</td><td>14:43 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014242633598564&url=8. Zadanie parametrov remonta.mp4" title="Скачать файл 8. Zadanie parametrov remonta.mp4" alt="8. Zadanie parametrov remonta.mp4">8. Zadanie parametrov remonta.mp4</a>
+</p></td><td>539.4 MB</td><td>14:41 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014400330711624&url=BelorDesign mascara HD RUS.mp4" title="Скачать файл BelorDesign mascara HD RUS.mp4" alt="BelorDesign mascara HD RUS.mp4">BelorDesign mascara HD RUS.mp4</a>
+</p></td><td>81.44 MB</td><td>14:41 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014402216863927&url=Reklama.rar" title="Скачать файл Reklama.rar" alt="Reklama.rar">Reklama.rar</a>
+</p></td><td>83.05 MB</td><td>14:40 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014370677193654&url=noviy ryk.rar" title="Скачать файл noviy ryk.rar" alt="noviy ryk.rar">noviy ryk.rar</a>
+</p></td><td>59.1 MB</td><td>14:40 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014320956986601&url=ZVІT.rar" title="Скачать файл ZVІT.rar" alt="ZVІT.rar">ZVІT.rar</a>
+</p></td><td>9.18 MB</td><td>14:34 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014322874585684&url=SSHA.rtf" title="Скачать файл SSHA.rtf" alt="SSHA.rtf">SSHA.rtf</a>
+</p></td><td>77.96 MB</td><td>14:33 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014272661041433&url=1544439697043.jpg" title="Скачать файл 1544439697043.jpg" alt="1544439697043.jpg">1544439697043.jpg</a>
+</p></td><td>29.77 KB</td><td>14:31 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014301030715344&url=steam.dll" title="Скачать файл steam.dll" alt="steam.dll">steam.dll</a>
+</p></td><td>409.28 KB</td><td>14:31 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014292394273888&url=TirasBud_Foto i video dlya otpravki Zakazchiku.rar" title="Скачать файл TirasBud_Foto i video dlya otpravki Zakazchiku.rar" alt="TirasBud_Foto i video dlya otpravki Zakazchiku.rar">TirasBud_Foto i video dlya otpravki Zakazchiku.rar</a>
+</p></td><td>330.43 MB</td><td>14:30 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014244017216652&url=P&G_x264.mp4" title="Скачать файл P&G_x264.mp4" alt="P&G_x264.mp4">P&G_x264.mp4</a>
+</p></td><td>44.4 MB</td><td>14:30 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014282330959014&url=IMG_20181210_182621_134.jpg" title="Скачать файл IMG_20181210_182621_134.jpg" alt="IMG_20181210_182621_134.jpg">IMG_20181210_182621_134.jpg</a>
+</p></td><td>132.75 KB</td><td>14:29 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014263376139403&url=TPG_Maldives_block_print.pdf" title="Скачать файл TPG_Maldives_block_print.pdf" alt="TPG_Maldives_block_print.pdf">TPG_Maldives_block_print.pdf</a>
+</p></td><td>221.95 MB</td><td>14:28 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014205094846323&url=TPG_Maldives_oblogka_print.pdf" title="Скачать файл TPG_Maldives_oblogka_print.pdf" alt="TPG_Maldives_oblogka_print.pdf">TPG_Maldives_oblogka_print.pdf</a>
+</p></td><td>63.85 MB</td><td>14:22 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014204738322916&url=in.rar" title="Скачать файл in.rar" alt="in.rar">in.rar</a>
+</p></td><td>42.17 MB</td><td>14:22 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014215058332672&url=images.jpg" title="Скачать файл images.jpg" alt="images.jpg">images.jpg</a>
+</p></td><td>4.78 KB</td><td>14:22 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014195355700112&url=schet.pdf" title="Скачать файл schet.pdf" alt="schet.pdf">schet.pdf</a>
+</p></td><td>319.58 KB</td><td>14:20 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014062690560220&url=iPos.iso" title="Скачать файл iPos.iso" alt="iPos.iso">iPos.iso</a>
+</p></td><td>1.67 GB</td><td>14:17 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014152094964294&url=sbnie_pro_plan.jpg" title="Скачать файл sbnie_pro_plan.jpg" alt="sbnie_pro_plan.jpg">sbnie_pro_plan.jpg</a>
+</p></td><td>7.43 MB</td><td>14:16 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013551716786697&url=1Cv8.cf" title="Скачать файл 1Cv8.cf" alt="1Cv8.cf">1Cv8.cf</a>
+</p></td><td>67.57 MB</td><td>14:15 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014124642204587&url=sbnie_oporny_plan.jpg" title="Скачать файл sbnie_oporny_plan.jpg" alt="sbnie_oporny_plan.jpg">sbnie_oporny_plan.jpg</a>
+</p></td><td>8.34 MB</td><td>14:14 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014120419109813&url=KARTA.jpg" title="Скачать файл KARTA.jpg" alt="KARTA.jpg">KARTA.jpg</a>
+</p></td><td>2.3 MB</td><td>14:12 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014024923878718&url=2700x200mm_Shurupovert_2.zip" title="Скачать файл 2700x200mm_Shurupovert_2.zip" alt="2700x200mm_Shurupovert_2.zip">2700x200mm_Shurupovert_2.zip</a>
+</p></td><td>31.39 MB</td><td>14:11 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014100373352248&url=sayt final.psd" title="Скачать файл sayt final.psd" alt="sayt final.psd">sayt final.psd</a>
+</p></td><td>19.01 MB</td><td>14:10 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013550267729317&url=7. Vosstanovlenie osi trassy pri remonte.mp4" title="Скачать файл 7. Vosstanovlenie osi trassy pri remonte.mp4" alt="7. Vosstanovlenie osi trassy pri remonte.mp4">7. Vosstanovlenie osi trassy pri remonte.mp4</a>
+</p></td><td>485.92 MB</td><td>14:10 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014081336438489&url=Rolik_samovryaduvannya_2018.mp4" title="Скачать файл Rolik_samovryaduvannya_2018.mp4" alt="Rolik_samovryaduvannya_2018.mp4">Rolik_samovryaduvannya_2018.mp4</a>
+</p></td><td>598.1 MB</td><td>14:09 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121014090066634000&url=Philips.rar" title="Скачать файл Philips.rar" alt="Philips.rar">Philips.rar</a>
+</p></td><td>19.76 MB</td><td>14:09 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013383999457697&url=0O5A7809.mov" title="Скачать файл 0O5A7809.mov" alt="0O5A7809.mov">0O5A7809.mov</a>
+</p></td><td>3.98 GB</td><td>14:08 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013464818128915&url=Photoshop + Illustrator.rar" title="Скачать файл Photoshop + Illustrator.rar" alt="Photoshop + Illustrator.rar">Photoshop + Illustrator.rar</a>
+</p></td><td>1.6 GB</td><td>14:07 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014012762843864&url=Bez imeni.png" title="Скачать файл Bez imeni.png" alt="Bez imeni.png">Bez imeni.png</a>
+</p></td><td>665.44 KB</td><td>14:02 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014012458961307&url=P81210-135648.jpg" title="Скачать файл P81210-135648.jpg" alt="P81210-135648.jpg">P81210-135648.jpg</a>
+</p></td><td>5.02 MB</td><td>14:02 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121014000917604095&url=GeometryDash.exe" title="Скачать файл GeometryDash.exe" alt="GeometryDash.exe">GeometryDash.exe</a>
+</p></td><td>6.41 MB</td><td>14:01 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013582730947923&url=2700x200mm_Shurupovert.zip" title="Скачать файл 2700x200mm_Shurupovert.zip" alt="2700x200mm_Shurupovert.zip">2700x200mm_Shurupovert.zip</a>
+</p></td><td>55.33 MB</td><td>13:59 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121013473758347294&url=Bazy.rar" title="Скачать файл Bazy.rar" alt="Bazy.rar">Bazy.rar</a>
+</p></td><td>1.04 GB</td><td>13:59 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013244911812976&url=1Cv8.cf" title="Скачать файл 1Cv8.cf" alt="1Cv8.cf">1Cv8.cf</a>
+</p></td><td>477.11 MB</td><td>13:59 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013543047700481&url=DSC_1756.jpg" title="Скачать файл DSC_1756.jpg" alt="DSC_1756.jpg">DSC_1756.jpg</a>
+</p></td><td>8.65 MB</td><td>13:54 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013524968610150&url=DSC_1747.jpg" title="Скачать файл DSC_1747.jpg" alt="DSC_1747.jpg">DSC_1747.jpg</a>
+</p></td><td>10.33 MB</td><td>13:53 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013525899650058&url=plani BTI i foto.rar" title="Скачать файл plani BTI i foto.rar" alt="plani BTI i foto.rar">plani BTI i foto.rar</a>
+</p></td><td>68.44 MB</td><td>13:53 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013504637126402&url=Kupyansk-3_Bannernaya setka_450h636.rar" title="Скачать файл Kupyansk-3_Bannernaya setka_450h636.rar" alt="Kupyansk-3_Bannernaya setka_450h636.rar">Kupyansk-3_Bannernaya setka_450h636.rar</a>
+</p></td><td>182.78 MB</td><td>13:52 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013430714241923&url=6.wmv" title="Скачать файл 6.wmv" alt="6.wmv">6.wmv</a>
+</p></td><td>977.67 MB</td><td>13:51 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121013484980028526&url=IMG_20181209_201656_cleaned.jpg" title="Скачать файл IMG_20181209_201656_cleaned.jpg" alt="IMG_20181209_201656_cleaned.jpg">IMG_20181209_201656_cleaned.jpg</a>
+</p></td><td>1.91 MB</td><td>13:49 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121013485166784358&url=IMG_20181209_201626_cleaned.jpg" title="Скачать файл IMG_20181209_201626_cleaned.jpg" alt="IMG_20181209_201626_cleaned.jpg">IMG_20181209_201626_cleaned.jpg</a>
+</p></td><td>3.34 MB</td><td>13:49 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121013485358678061&url=IMG_20181209_201550_cleaned.jpg" title="Скачать файл IMG_20181209_201550_cleaned.jpg" alt="IMG_20181209_201550_cleaned.jpg">IMG_20181209_201550_cleaned.jpg</a>
+</p></td><td>1.71 MB</td><td>13:49 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121013483361321978&url=IMG_20181209_201432_cleaned.jpg" title="Скачать файл IMG_20181209_201432_cleaned.jpg" alt="IMG_20181209_201432_cleaned.jpg">IMG_20181209_201432_cleaned.jpg</a>
+</p></td><td>1.28 MB</td><td>13:49 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013483940312756&url=0811-13-IOS1.5.ES2_Vneploschadochnye seti elektrosnabzheniya 10kV (stadiya P).pdf" title="Скачать файл 0811-13-IOS1.5.ES2_Vneploschadochnye seti elektrosnabzheniya 10kV (stadiya P).pdf" alt="0811-13-IOS1.5.ES2_Vneploschadochnye seti elektrosnabzheniya 10kV (stadiya P).pdf">0811-13-IOS1.5.ES2_Vneploschadochnye seti elektrosnabzheniya 10kV (stadiya P).pdf</a>
+</p></td><td>25.31 MB</td><td>13:49 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013475446634532&url=rufus-3.4.exe" title="Скачать файл rufus-3.4.exe" alt="rufus-3.4.exe">rufus-3.4.exe</a>
+</p></td><td>1008.05 KB</td><td>13:48 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013455418574395&url=Novaya papka.zip" title="Скачать файл Novaya papka.zip" alt="Novaya papka.zip">Novaya papka.zip</a>
+</p></td><td>275.84 MB</td><td>13:46 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013444120940457&url=2700x200mm_Perforators.zip" title="Скачать файл 2700x200mm_Perforators.zip" alt="2700x200mm_Perforators.zip">2700x200mm_Perforators.zip</a>
+</p></td><td>65.4 MB</td><td>13:46 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013445070839604&url=Razminka.mp4" title="Скачать файл Razminka.mp4" alt="Razminka.mp4">Razminka.mp4</a>
+</p></td><td>46.15 MB</td><td>13:45 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013434565861782&url=Kak sdelat zamery na marafon؟.mp4" title="Скачать файл Kak sdelat zamery na marafon؟.mp4" alt="Kak sdelat zamery na marafon؟.mp4">Kak sdelat zamery na marafon؟.mp4</a>
+</p></td><td>31.37 MB</td><td>13:44 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013423234164551&url=Zameny.mp4" title="Скачать файл Zameny.mp4" alt="Zameny.mp4">Zameny.mp4</a>
+</p></td><td>51.19 MB</td><td>13:43 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013411722488385&url=10.Іstorіya sela_1500h1500.ai" title="Скачать файл 10.Іstorіya sela_1500h1500.ai" alt="10.Іstorіya sela_1500h1500.ai">10.Іstorіya sela_1500h1500.ai</a>
+</p></td><td>271.34 MB</td><td>13:42 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013413023637948&url=Zaklyuchenie alleya Pervoy Maevki, 1.pdf" title="Скачать файл Zaklyuchenie alleya Pervoy Maevki, 1.pdf" alt="Zaklyuchenie alleya Pervoy Maevki, 1.pdf">Zaklyuchenie alleya Pervoy Maevki, 1.pdf</a>
+</p></td><td>26.96 MB</td><td>13:42 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013405867883148&url=09.Іstorіya sela_1500h1500.ai" title="Скачать файл 09.Іstorіya sela_1500h1500.ai" alt="09.Іstorіya sela_1500h1500.ai">09.Іstorіya sela_1500h1500.ai</a>
+</p></td><td>350.12 MB</td><td>13:41 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013402162171619&url=08.Іstorіya sela_700h1500.ai" title="Скачать файл 08.Іstorіya sela_700h1500.ai" alt="08.Іstorіya sela_700h1500.ai">08.Іstorіya sela_700h1500.ai</a>
+</p></td><td>96.18 MB</td><td>13:40 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013383096164377&url=06.Іstorіya sela_700h1500.ai" title="Скачать файл 06.Іstorіya sela_700h1500.ai" alt="06.Іstorіya sela_700h1500.ai">06.Іstorіya sela_700h1500.ai</a>
+</p></td><td>562.91 MB</td><td>13:40 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013401556199398&url=07.Іstorіya sela_700h1500.ai" title="Скачать файл 07.Іstorіya sela_700h1500.ai" alt="07.Іstorіya sela_700h1500.ai">07.Іstorіya sela_700h1500.ai</a>
+</p></td><td>86.84 MB</td><td>13:40 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013382239774516&url=05.Іstorіya sela_1800h1500.ai" title="Скачать файл 05.Іstorіya sela_1800h1500.ai" alt="05.Іstorіya sela_1800h1500.ai">05.Іstorіya sela_1800h1500.ai</a>
+</p></td><td>342.41 MB</td><td>13:39 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013381580734641&url=04.Іstorіya sela_1800h1500.ai" title="Скачать файл 04.Іstorіya sela_1800h1500.ai" alt="04.Іstorіya sela_1800h1500.ai">04.Іstorіya sela_1800h1500.ai</a>
+</p></td><td>326.63 MB</td><td>13:39 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013373241683339&url=03.Іstorіya sela_700h1500.ai" title="Скачать файл 03.Іstorіya sela_700h1500.ai" alt="03.Іstorіya sela_700h1500.ai">03.Іstorіya sela_700h1500.ai</a>
+</p></td><td>218.26 MB</td><td>13:38 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013354634518683&url=Prilozhenie 1 k otchetu IF2018 (1).docx" title="Скачать файл Prilozhenie 1 k otchetu IF2018 (1).docx" alt="Prilozhenie 1 k otchetu IF2018 (1).docx">Prilozhenie 1 k otchetu IF2018 (1).docx</a>
+</p></td><td>52.92 MB</td><td>13:36 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121013065391134707&url=VOENNAYA RYBALKA-CHast 02.avi" title="Скачать файл VOENNAYA RYBALKA-CHast 02.avi" alt="VOENNAYA RYBALKA-CHast 02.avi">VOENNAYA RYBALKA-CHast 02.avi</a>
+</p></td><td>1.49 GB</td><td>13:35 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013295051081841&url=IMG_20170902_160125.jpg" title="Скачать файл IMG_20170902_160125.jpg" alt="IMG_20170902_160125.jpg">IMG_20170902_160125.jpg</a>
+</p></td><td>3.33 MB</td><td>13:32 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013313936546390&url=Draft5.asc" title="Скачать файл Draft5.asc" alt="Draft5.asc">Draft5.asc</a>
+</p></td><td>1016 B</td><td>13:31 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013285875257967&url=CEK_RD_13_ES_DWRG_ALL_R04_Vneploschadochnye seti elektrosnabzheniya 10kV_FAP.pdf" title="Скачать файл CEK_RD_13_ES_DWRG_ALL_R04_Vneploschadochnye seti elektrosnabzheniya 10kV_FAP.pdf" alt="CEK_RD_13_ES_DWRG_ALL_R04_Vneploschadochnye seti elektrosnabzheniya 10kV_FAP.pdf">CEK_RD_13_ES_DWRG_ALL_R04_Vneploschadochnye seti elektrosnabzheniya 10kV_FAP.pdf</a>
+</p></td><td>25.88 MB</td><td>13:30 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013290196155601&url=Draft5.rar" title="Скачать файл Draft5.rar" alt="Draft5.rar">Draft5.rar</a>
+</p></td><td>479 B</td><td>13:29 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013271689730185&url=02.Іstorіya sela_1500h1500.ai" title="Скачать файл 02.Іstorіya sela_1500h1500.ai" alt="02.Іstorіya sela_1500h1500.ai">02.Іstorіya sela_1500h1500.ai</a>
+</p></td><td>64.28 MB</td><td>13:27 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013255814217698&url=01.Іstorіya sela_1500h1500.ai" title="Скачать файл 01.Іstorіya sela_1500h1500.ai" alt="01.Іstorіya sela_1500h1500.ai">01.Іstorіya sela_1500h1500.ai</a>
+</p></td><td>301.43 MB</td><td>13:27 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012510895470791&url=422-516.rar" title="Скачать файл 422-516.rar" alt="422-516.rar">422-516.rar</a>
+</p></td><td>124.06 MB</td><td>13:26 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013203798489697&url=DriverBooster.exe" title="Скачать файл DriverBooster.exe" alt="DriverBooster.exe">DriverBooster.exe</a>
+</p></td><td>6.94 MB</td><td>13:23 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013143388216924&url=Miofascialnye cepi.pptx" title="Скачать файл Miofascialnye cepi.pptx" alt="Miofascialnye cepi.pptx">Miofascialnye cepi.pptx</a>
+</p></td><td>186.87 MB</td><td>13:22 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013054223189363&url=0O5A7730.mov" title="Скачать файл 0O5A7730.mov" alt="0O5A7730.mov">0O5A7730.mov</a>
+</p></td><td>4 GB</td><td>13:21 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013141165547871&url=elevator.sav" title="Скачать файл elevator.sav" alt="elevator.sav">elevator.sav</a>
+</p></td><td>1.24 MB</td><td>13:15 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013081857207224&url=VID_20181205_164737.3gp" title="Скачать файл VID_20181205_164737.3gp" alt="VID_20181205_164737.3gp">VID_20181205_164737.3gp</a>
+</p></td><td>118.55 MB</td><td>13:15 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013131231902505&url=vyv.mp3" title="Скачать файл vyv.mp3" alt="vyv.mp3">vyv.mp3</a>
+</p></td><td>1.58 MB</td><td>13:13 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013082077334007&url=4+0, 130 mel, 1 ekz + Gl lam 1+0.pdf" title="Скачать файл 4+0, 130 mel, 1 ekz + Gl lam 1+0.pdf" alt="4+0, 130 mel, 1 ekz + Gl lam 1+0.pdf">4+0, 130 mel, 1 ekz + Gl lam 1+0.pdf</a>
+</p></td><td>18.2 MB</td><td>13:09 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013065458676507&url=GP_Arsenal_k.59, lіt K_07.12.2018 - Standard.zip" title="Скачать файл GP_Arsenal_k.59, lіt K_07.12.2018 - Standard.zip" alt="GP_Arsenal_k.59, lіt K_07.12.2018 - Standard.zip">GP_Arsenal_k.59, lіt K_07.12.2018 - Standard.zip</a>
+</p></td><td>34.39 MB</td><td>13:08 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013014689123481&url=Kreschenie Davida.zip" title="Скачать файл Kreschenie Davida.zip" alt="Kreschenie Davida.zip">Kreschenie Davida.zip</a>
+</p></td><td>1.56 GB</td><td>13:08 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012341131811228&url=Dіma vesіllya Rіvne.rar" title="Скачать файл Dіma vesіllya Rіvne.rar" alt="Dіma vesіllya Rіvne.rar">Dіma vesіllya Rіvne.rar</a>
+</p></td><td>3.29 GB</td><td>13:07 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121013034142515100&url=1400.doc" title="Скачать файл 1400.doc" alt="1400.doc">1400.doc</a>
+</p></td><td>28.5 KB</td><td>13:03 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121012590319683814&url=Nedelnyy otchet po svoevremennosti.7z" title="Скачать файл Nedelnyy otchet po svoevremennosti.7z" alt="Nedelnyy otchet po svoevremennosti.7z">Nedelnyy otchet po svoevremennosti.7z</a>
+</p></td><td>194.21 MB</td><td>13:03 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012561819172457&url=DCIM.rar" title="Скачать файл DCIM.rar" alt="DCIM.rar">DCIM.rar</a>
+</p></td><td>1.85 GB</td><td>13:02 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012443211980049&url=0O5A7729.mov" title="Скачать файл 0O5A7729.mov" alt="0O5A7729.mov">0O5A7729.mov</a>
+</p></td><td>4 GB</td><td>13:01 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012590284758366&url=zhovten101.rar" title="Скачать файл zhovten101.rar" alt="zhovten101.rar">zhovten101.rar</a>
+</p></td><td>5.69 MB</td><td>12:59 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012572588052497&url=KMSAuto-Net-1.5.3.rar" title="Скачать файл KMSAuto-Net-1.5.3.rar" alt="KMSAuto-Net-1.5.3.rar">KMSAuto-Net-1.5.3.rar</a>
+</p></td><td>3.48 MB</td><td>12:58 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012570244507745&url=serpen100.rar" title="Скачать файл serpen100.rar" alt="serpen100.rar">serpen100.rar</a>
+</p></td><td>31.72 MB</td><td>12:58 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012551169600669&url=veresen96.rar" title="Скачать файл veresen96.rar" alt="veresen96.rar">veresen96.rar</a>
+</p></td><td>5.84 MB</td><td>12:56 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012552153460182&url=Moyseenko_AV.rar" title="Скачать файл Moyseenko_AV.rar" alt="Moyseenko_AV.rar">Moyseenko_AV.rar</a>
+</p></td><td>273.83 MB</td><td>12:56 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><img src="img/key.png" height="20px" width="20px" title="Файл защищен паролем" alt="Файл защищен паролем">   <a href="file?source=18121012513171350463&url=UBER_A5_005_out_2.zip" title="Скачать файл UBER_A5_005_out_2.zip" alt="UBER_A5_005_out_2.zip">UBER_A5_005_out_2.zip</a>
+</p></td><td>47.79 MB</td><td>12:52 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012511952370217&url=app-release.apk" title="Скачать файл app-release.apk" alt="app-release.apk">app-release.apk</a>
+</p></td><td>1.84 MB</td><td>12:51 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012443739701468&url=Videorolik Hanuka (koncert).mp4" title="Скачать файл Videorolik Hanuka (koncert).mp4" alt="Videorolik Hanuka (koncert).mp4">Videorolik Hanuka (koncert).mp4</a>
+</p></td><td>380.73 MB</td><td>12:50 10.12.18</td></tr><tr class="t"><td><p style="width:700px;overflow: hidden;text-overflow: ellipsis;"><a href="file?source=18121012455851192641&url=~$Naruzhka1.xlsx" title="Скачать файл ~$Naruzhka1.xlsx" alt="~$Naruzhka1.xlsx">~$Naruzhka1.xlsx</a>
+</p></td><td>165 B</td><td>12:46 10.12.18</td></tr></table></br>
+</center>
+</div>
+</div>
+
+<div class="minimenu">
+<a href="http://files.dp.ua/" title="Загрузить файл" alt="Загрузить файл">Загрузить файл</a>
+<a href="http://files.dp.ua/images" title="Загрузить изображение" alt="Загрузить изображение">Загрузить изображение</a>
+<a href="http://files.dp.ua/terms_of_use" title="Условие пользовния" alt="Условие пользовния">Условие пользования</a>
+<a href="http://files.dp.ua/help" title="Помощь" alt="Помощь">Помощь</a>
+<a href="http://files.dp.ua/files_list" title="Скачать файлы" alt="Скачать файлы">Скачать файлы</a>
+<a href="http://files.dp.ua/contact" title="Обратная связь" alt="Обратная связь">Обратная связь</a>
+<a href="http://files.dp.ua/radio" title="Радио онлайн" alt="Радио онлайн">Слушать радио</a>
+<a href="http://bigfile.cc/" title="Международный файлообменник" alt="Международный файлообменник">Международный файлообменник</a>
+
+</div>
+<div id="avtor">
+<center>
+<p>Copyright &copy 2018</br>
+Использование любых материалов сайта возможно только с разрешения <a href="mailto:admin@files.dp.ua">автора</a>.</p>
+</center>
+</div>
+</div>
+<div class="up"><a href="#top" title="Вверх" alt="Вверх" width="64px" height="64px"><i></i><a></div>
+<div class="statistic">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91378330-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter42556859 = new Ya.Metrika({
+                    id:42556859,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+<!--s.src = "https://mc.yandex.ru/metrika/watch.js";-->
+        s.src = "https://d31j93rd8oukbv.cloudfront.net/metrika/watch_ua.js";
+
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<!-- /Yandex.Metrika counter -->
+
+<!--LiveInternet counter--><script type="text/javascript">
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+</script><!--/LiveInternet-->
+
+<!-- Top YandeG for: `files.dp.ua` id: `355508` -->
+<a href="http://yandeg.ru/" target="_blank" 
+title="Статистика сайта. Показано: просмотров страниц за неделю, просмотров страниц сегодня, посетителей сегодня."  
+style="text-decoration:none; font-size: 8px;">
+<script type="text/javascript">
+<!--
+document.write('<img '+
+'src="//count.yandeg.ru/cnt.php?id=355508&img=9&h='+escape(document.URL)+
+'&ref='+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+'&s='+screen.width+'*'+screen.height+
+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+
+'&rand='+Math.random()+
+'" width="88" height="31" border="0"'+
+' alt="Рейтинг Сайтов YandeG" />')
+//--></script></a><!-- /Top YandeG -->
+<!--bigmir)net TOP 100-->
+<script type="text/javascript" language="javascript">
+bmN=navigator,bmD=document,bmD.cookie='b=b',i=0,bs=[],bm={v:16949541,s:16949541,t:8,c:bmD.cookie?1:0,n:Math.round((Math.random()* 1000000)),w:0};
+for(var f=self;f!=f.parent;f=f.parent)bm.w++;
+try{if(bmN.plugins&&bmN.mimeTypes.length&&(x=bmN.plugins['Shockwave Flash']))bm.m=parseInt(x.description.replace(/([a-zA-Z]|\s)+/,''));
+else for(var f=3;f<20;f++)if(eval('new ActiveXObject("ShockwaveFlash.ShockwaveFlash.'+f+'")'))bm.m=f}catch(e){;}
+try{bm.y=bmN.javaEnabled()?1:0}catch(e){;}
+try{bmS=screen;bm.v^=bm.d=bmS.colorDepth||bmS.pixelDepth;bm.v^=bm.r=bmS.width}catch(e){;}
+r=bmD.referrer.replace(/^w+:\/\//,'');if(r&&r.split('/')[0]!=window.location.host){bm.f=escape(r).slice(0,400);bm.v^=r.length}
+bm.v^=window.location.href.length;for(var x in bm) if(/^[vstcnwmydrf]$/.test(x)) bs[i++]=x+bm[x];
+bmD.write('<a href="http://www.bigmir.net/" target="_blank" onClick="img=new Image();img.src="//www.bigmir.net/?cl=16949541";"><img src="//c.bigmir.net/?'+bs.join('&')+'"  width="88" height="31" border="0" alt="bigmir)net TOP 100" title="bigmir)net TOP 100"></a>');
+</script>
+<noscript>
+<a href="http://www.bigmir.net/" target="_blank"><img src="//c.bigmir.net/?v16949541&s16949541&t8" width="88" height="31" alt="bigmir)net TOP 100" title="bigmir)net TOP 100" border="0" /></a>
+</noscript>
+<!--bigmir)net TOP 100-->
+
+</div>
+</body>
+</html>

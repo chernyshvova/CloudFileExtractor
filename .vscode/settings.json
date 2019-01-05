@@ -1,6 +1,6 @@
 {
     "python.unitTest.cwd": "",
-    "python.unitTest.unittestEnabled": true,
+    "python.unitTest.unittestEnabled": false,
     "python.unitTest.pyTestEnabled": false,
     "python.unitTest.nosetestsEnabled": false,
     "python.unitTest.unittestArgs": [
@@ -9,5 +9,6 @@
         "./connector",
         "-p",
         "test*.py"
-    ]
+    ],
+    "python.unitTest.promptToConfigure": false
 }

@@ -1,10 +1,11 @@
 from Requester import connector
+from fileSorage import get_filesList, StorageFile
+from explorer import saveFilesToJson, saveStorageFiles
 
 
 
+filelist = get_filesList()
 
-conx = connector()
 
-conx.get_http_request("https://www.google.com.ua/")
-conx.download_file("https://www.google.com.ua/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-                    "anme")
+saveStorageFiles(filelist)
+#saveFileToJson(filelist)
