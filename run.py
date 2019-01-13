@@ -1,11 +1,6 @@
-from Requester import connector
-from fileSorage import get_filesList, StorageFile
-from explorer import saveFilesToJson, saveStorageFiles
+from fileSorage import updateInfo, run_downloader
+
+updateInfo()
+run_downloader()
 
 
-
-filelist = get_filesList()
-
-
-saveStorageFiles(filelist)
-#saveFileToJson(filelist)

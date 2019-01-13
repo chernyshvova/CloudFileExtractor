@@ -46,12 +46,13 @@ def download_file(url, name, proxy = None):
         prx = None
         if proxy:
             prx = {proxy.host: proxy.port}
-        response = requests.get(url, stream=True, timeout = 10, proxies = prx)
+        response = requests.get(url, stream=True, timeout = 50, proxies = prx)
         total_size = int(response.headers.get('content-length', 0)); 
-        block_size = 1024
+        block_size = 1024 * 1024
         with open(name, "wb") as handle:
-            for data in tqdm(response.iter_content(block_size), total= math.ceil(total_size//block_size) , unit='KB', unit_scale=True):
+            for data in tqdm(response.iter_content(block_size), total= math.ceil(total_size//block_size) , unit='MB', unit_scale=True):
                 handle.write(data)
+        print("done\n-----------------------------------------------------------------------")
     except socket.timeout as ex:
         print(str(ex) + "---- TODO- instert error code in HTTPtools")
     except Exception as ex:

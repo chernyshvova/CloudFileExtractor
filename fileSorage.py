@@ -1,8 +1,13 @@
 
 from Requester import connector
 from bs4 import BeautifulSoup
-from os.path import join
+from os.path import join, exists
+from os import mkdir, rmdir
 from urllib.parse import quote_plus
+from connector.HTTPTools import download_file
+from shutil import rmtree
+from humanfriendly import parse_size
+from explorer import saveFilesToJson, saveStorageFiles, readStorageFiles
 
 class StorageFile:
     name = ""
@@ -13,9 +18,6 @@ class StorageFile:
     source = ""
     downloaded = False
     encrypted = False
-
-class StorageFiles:
-    files = []
 
 def get_filesList():
     url = "http://files.dp.ua/files_list"
@@ -41,7 +43,7 @@ def fileListToFiles(filelist):
     storegeFiles = []
     for i in range(0, 7):#filelist
         url = join("http://files.dp.ua/", fileUriEncode(filelist[i]))
-        print("url is {}".format(url))
+        print("saving url {}".format(url))
         conx.get_http_request(url)
         responsePage = conx.get_body()
 
@@ -54,6 +56,12 @@ def fileListToFiles(filelist):
             storegeFiles.append(parseFileInfoFromPage(responsePage))
     return storegeFiles
 
+def getCArg(page):
+    
+    start = page.find("&c=")
+    end = page[start:].find("\"")
+    return page[start: start +end]
+
 def parseFileInfoFromPage(page):
     metaFile = StorageFile()
     soup = BeautifulSoup(page, features="lxml")
@@ -62,10 +70,11 @@ def parseFileInfoFromPage(page):
     metaList = stat.contents
     
     metaFile.name =  parseValueFromSoupStatName(metaList[1])
-    metaFile.source =  parseValueFromSoupStat(metaList[3])
-    metaFile.size =  parseValueFromSoupStat(metaList[5])
+    metaFile.source =  parseValueFromSoupStat(metaList[3]) + getCArg(str(page))
+    metaFile.size =  getSizeBytes(parseValueFromSoupStat(metaList[5]))
     metaFile.time =  parseValueFromSoupStat(metaList[7])
     metaFile.checkSum =  parseValueFromSoupStat(metaList[9])
+    metaFile.resolution = metaFile.name[metaFile.name.rfind(".")+1:]
     return metaFile
 
 def fileUriEncode(strFile):
@@ -75,12 +84,11 @@ def fileUriEncode(strFile):
 
 def parseValueFromSoupStatName(stat):
     statStr = str(stat)
-    start = statStr.find("<span><b>") + len("<span><b>")
+    start = statStr.find("<span><b>") + len("<span><b>") -1
     end = statStr.find("</b></span>") 
     
-    fullname = statStr[start:end]
-   
-    return parseNameFromFull(fullname)
+    fullname = statStr[start+1:end]
+    return fullname
 
 
 def parseNameFromFull(full):
@@ -105,3 +113,34 @@ def is_encrypted(page):
     if stat is None:
         return True
     return False
+
+def downloadFiles(filelist):
+
+    for file in filelist:
+        if file["encrypted"] == True:
+            continue
+        path = preparefolderForFile(file)
+        fileUri = "http://files.dp.ua/download.php?source=" + file["key"]
+        print("downloading file:{}".format(file["name"]))
+        download_file(fileUri, join(path, file["name"]))
+    
+def preparefolderForFile(file):
+        if not exists("storage"):
+                mkdir("storage")
+        
+        if exists(join("storage", file["name"])):
+            rmtree(join("storage", file["name"]))
+        mkdir(join("storage", file["name"]))
+        return join("storage", file["name"])
+
+
+def getSizeBytes(sizeStr):
+    return parse_size(sizeStr)
+
+def updateInfo():
+    filelist = get_filesList()
+    saveStorageFiles(filelist)
+
+def run_downloader(filter = False):
+    filelist = readStorageFiles()
+    downloadFiles(filelist)

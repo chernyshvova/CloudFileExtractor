@@ -1,7 +1,7 @@
 from os.path import exists, join
 import os
 from json import dump, load
-from fileSorage import StorageFile
+
 
 def prepareEnvironment(path):
     if not exists(path):
@@ -48,10 +48,21 @@ def saveStorageFiles(storageFiles):
         
         with open('data.json', 'w') as outfile:  
                 dump(jsonFile, outfile)
-                        
+
+
+def readStorageFiles():
+        if not exists("data.json"):
+                raise Exception("data files is not exist")
+
+        with open('data.json') as f:
+                jsonFile = load(f)
+        
+        return jsonFile["files"]
+
 def is_fileExistsInArray(fileList, storeageFile):
         for oldFile in fileList:
                 if storeageFile.name == oldFile["name"]:#change to checksum
                         return True
         
         return False
+
