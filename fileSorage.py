@@ -8,6 +8,7 @@ from connector.HTTPTools import download_file
 from shutil import rmtree
 from humanfriendly import parse_size
 from explorer import saveFilesToJson, saveStorageFiles, readStorageFiles
+from SitesInfo import SiteInfo
 
 class StorageFile:
     name = ""
@@ -20,7 +21,7 @@ class StorageFile:
     encrypted = False
 
 def get_filesList():
-    url = "http://files.dp.ua/files_list"
+    url = SiteInfo.FILELIST_URL
     conx = connector()
     conx.get_http_request(url)
     responsePage = conx.get_body()
@@ -120,7 +121,7 @@ def downloadFiles(filelist):
         if file["encrypted"] == True:
             continue
         path = preparefolderForFile(file)
-        fileUri = "http://files.dp.ua/download.php?source=" + file["key"]
+        fileUri = SiteInfo.FILE_URL + file["key"]
         print("downloading file:{}".format(file["name"]))
         download_file(fileUri, join(path, file["name"]))
     
